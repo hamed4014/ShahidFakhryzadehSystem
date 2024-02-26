@@ -1,0 +1,182 @@
+
+.user_list {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user_list table {
+    font-family: "B Titr";
+    width: 100%;
+    direction: rtl;
+    text-align: center;
+    border-collapse: collapse;
+    color: rgb(70,70,70);
+}
+
+.user_list table thead {
+    height: 60px;
+    border-bottom: solid 5px rgb(100,150,255);
+    border-top: solid 5px rgb(100,150,255);
+}
+
+.user_list table thead td {
+    font-size: 12pt;
+}
+
+.user_list table tr {
+    font-size: 10pt;
+    height: 50px;
+
+}
+
+.user_list table tr:nth-child(2n) {
+    background-color: rgb(190,230,255);
+}
+
+.user_list table tr td {
+
+}
+
+.search {
+    width: 355px;
+    float: right;
+    margin-bottom: 25px;
+}
+
+.search form {
+    width: 354px;
+    height: 40px;
+    border-radius: 10px;
+    display: inline-block;
+    border: solid 2px rgb(200,200,200);
+    transition: 0.2s;
+    position: relative;
+}
+
+.search input {
+    display: inline-block;
+    height: 40px;
+    width: 300px;
+    border: none;
+    transition: 0.2s;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 12pt;
+    font-family: "B Titr";
+}
+
+.search input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.search label {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border: none;
+    text-align: center;
+    font-size: 15pt;
+    color: rgb(150,150,150);
+    z-index: 10;
+}
+
+.search_butten {
+    position: absolute;
+    left: 0 !important;
+    top: 0 !important;
+    opacity: 0 !important;
+    height: 40px !important;
+    width: 40px !important;
+    border-bottom-right-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    z-index: 20;
+    padding: 0 !important;
+    cursor: pointer;
+}
+
+.signin_button {
+    width: 150px;
+    height: 36px;
+    text-align: center;
+    line-height: 40px;
+    font-family: "B Titr";
+    font-size: 12pt;
+    border-radius: 7px;
+    background-color: rgb(190,230,255);
+    color: rgb(110,110,110);
+    float: left;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 50px;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+.signin_button:hover {
+    background-color: rgb(160,220,255);
+    transition: 0.2s;
+}
+
+body nav {
+    direction: ltr;
+    font-family: "B Titr";
+    text-align: center;
+}
+
+body nav>div>div:first-child {
+    display: none;
+}
+
+body nav>div:first-child {
+    display: none;
+}
+
+body nav a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    float: left;
+    text-decoration: none;
+    border-radius: 5px;
+    color: rgb(100,100,100);
+}
+
+body nav>div>div>span span {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(100,140,255);
+    box-shadow: 0px 0px 6px 1px rgba(100,140,255,0.5);
+    line-height: 30px;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+
+body nav>div>div>span {
+    display: inline-block;
+    height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(220,220,220);
+    border-radius: 15px;
+}
+
+body nav svg {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+}
+
+

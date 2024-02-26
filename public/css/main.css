@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(210, 240, 255);
+    width: 100%;
+    height: 60px;
+    position: relative;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+
+header>a {
+    cursor: pointer;
+}
+
+header>a>span {
+    font-family: "MRT_Farsi Simple Normal";
+    color: rgb(50, 50 , 50);
+    line-height: 60px;
+    position: absolute;
+    width: 215px;
+    right: 0px;
+    text-align: center;
+    font-size: 18pt;
+}
+
+header>div {
+    position: absolute;
+    left: 0px;
+    font-family: "B Titr";
+    height: 60px;
+    width: 170px;
+    line-height: 60px;
+    text-align: right;
+    padding-right: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+    color: rgb(50,50,50);
+}
+
+header>div:nth-child(3) {
+    position: absolute;
+    left: 170px;
+    width: 190px;
+    cursor: unset;
+}
+
+header>div>span {
+    font-size: 13pt;
+    display: block;
+    float: right;
+}
+
+header>div>i:first-child {
+    font-size: 10pt;
+    margin-top: 23px;
+    margin-right: 0px;
+    margin-left: 8px;
+    float: right;
+}
+
+header>div>i {
+    font-size: 30pt;
+    margin-top: 10px;
+    margin-right: 7px;
+}
+
+.left_list {
+    position: fixed;
+    display: block;
+    z-index: 100;
+    top: 60px;
+    left: -170px;
+    width: 170px;
+    cursor: unset;
+    background-color: rgb(190, 230, 255);
+    text-align: center;
+    font-family: "B Titr";
+    font-size: 12pt;
+    list-style-position: inside;
+    list-style: none;
+    transition: 0.5s;
+    color: rgb(50,50,50);
+}
+
+.left_list li
+{
+    height: 35px;
+    line-height: 35px;
+    background-color: rgba(210, 245, 255 , 0);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.left_list li button {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+}
+
+.left_list li:hover {
+    background-color: rgba(100, 150, 255 , 0.8);
+    transition: 0.4s;
+}
+
+.right_list {
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    width: 215px;
+    height: 100vh;
+    list-style-position: inside;
+    list-style: none;
+    background-image: linear-gradient(rgba(190, 235, 255), rgba(240, 250, 255));
+    color: rgb(50,50,50);
+}
+
+.right_list a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.right_list>a>li {
+    height: 40px;
+    width: 203px;
+    text-align: right;
+    font-family: "B Titr";
+    font-size: 11pt;
+    border-bottom: solid 2px rgb(255,255,255);
+    padding-right: 12px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.right_list>a>li:hover {
+    padding-right: 50px;
+    width: 153px;
+    transition: 0.3s;
+}
+
+.right_list>a>li>i {
+    margin-left: 7px;
+}
+
+main {
+    height: 500px;
+    margin-top: 72px;
+    margin-right: auto;
+    margin-left: 12px;
+    display: block;
+    float: left;
+    width: calc( 100% - 239px);
+}
+
+.massage_successful {
+    width: 100%;
+    top: 70px;
+    right: auto;
+    left: auto;
+    position: fixed;
+    z-index: 1000;
+    height: 45px;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 1;
+
+}
+
+.massage_successful div {
+    width: 400px;
+    height: 35px;
+    line-height: 35px;
+    background-color: rgb(209,231,221);
+    font-family: "2  Koodak";
+    font-size: 14pt;
+    color: rgb(10,54,34);
+    border-radius: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: right;
+    padding: 5px;
+    border: 2px solid rgb(163,207,187);
+    font-weight: 1000;
+}
+
+.error {
+    display: block;
+    width: calc(98% - 15px);
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 40px;
+    font-family: "2  Koodak";
+    font-weight: 1000;
+    font-size: 14pt;
+    padding-right: 15px;
+    text-align: right;
+    background-color: rgb(248,215,218);
+    color: rgb(88,21,28);
+    border-radius: 10px;
+    border: solid 2px rgb(241,174,181);
+    margin-top: 15px;
+}
+
+.error i {
+    margin-left: 5px;
+}
+
+.sub_menu {
+
+    width: 100%;
+    list-style-position: inside;
+    list-style: none;
+}
+
+.sub_menu {
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    opacity: 0;
+    line-height: 30px;
+    font-family: "B Titr";
+    font-size: 10pt;
+    padding-right: 12px;
+    transition: 0.3s;
+}
+
+.sub_menu:hover {
+    padding-right: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sub_menu hr {
+    width: 80%;
+    height: 2px;
+    background-color: rgb(255,255,255);
+    border: none;
+}
+
+
+

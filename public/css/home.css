@@ -1,0 +1,90 @@
+.log {
+    width: calc(100% - 20);
+    border-radius: 15px;
+    border: solid 5px rgb(100,190,120);
+    direction: rtl;
+    text-align: right;
+    color: rgb(100,100,100);
+    font-family: "B Nazanin";
+    font-size: 16pt;
+    padding: 10px;
+    font-weight: 800;
+}
+
+.log span {
+    font-family: inherit;
+    font-size: 18pt;
+    color: rgb(255,70,100);
+    font-weight: 1000;
+}
+
+.massage_box {
+    width: calc(100% - 20);
+    border-radius: 15px;
+    border: solid 5px rgb(110,200,255);
+    direction: rtl;
+    color: rgb(100,100,100);
+    font-family: "B Nazanin";
+    padding: 10px;
+    font-weight: 800;
+    margin-top: 12px;
+}
+
+.massage_box>span:first-child {
+    text-align: right;
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 20px;
+    font-size: 18pt;
+}
+
+.massage_box>span {
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15pt;
+}
+
+.general_info {
+    width: 100%;
+    direction: rtl;
+    color: rgb(130,130,130);
+    font-family: "B Titr";
+    font-size: 13pt;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+.statistics {
+    border-radius: 15px;
+    border: solid 5px rgb(110,200,255);
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    float: left;
+}
+
+.statistics span {
+    display: block;
+    margin-top: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.statistics span i {
+    margin-left: 5px;
+}
+
+.chart {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 230px;
+    height: 230px;
+    border-radius:50%;
+}
+
+
