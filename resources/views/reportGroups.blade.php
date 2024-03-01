@@ -1,7 +1,7 @@
 @extends('index')
 
 @section('title')
-    <title>ثبت حضور و غیاب</title>
+    <title>گزارش حضور و غیاب</title>
 @endsection
 
 @section('private_link')
@@ -11,17 +11,9 @@
 @endsection
 
 @section('main')
-    @if( !empty(session('success')) )
-        <div class="massage_successful" on="massage()" id="alert">
-            <div>
-                <i class="fa-solid fa-circle-check" style="margin-left: 4px;"></i>
-                {{session('success')}}
-            </div>
-        </div>
-    @endif
     <main>
     <span class="title_reg">
-    ثبت حضور افراد
+    انتخاب حلقه صالحین
     </span>
         {!! Form::open(['route' => 'store.present' , 'method' => 'Post' , 'class' => 'form_reg']) !!}
         @if ($errors->any())
@@ -30,15 +22,15 @@
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     {{$error}}
                     <br>
-            @endforeach
+                @endforeach
             </span>
         @endif
         @if (!empty(session('user_error')) || !empty(session('group_error')) || !empty(session('date_error')))
             <span class="error">
                 @if(!empty(session('user_error')))
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                {{session('user_error')}}
-                <br>
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    {{session('user_error')}}
+                    <br>
                 @endif
                 @if(!empty(session('group_error')))
                     <i class="fa-solid fa-triangle-exclamation"></i>
@@ -52,15 +44,6 @@
                 @endif
             </span>
         @endif
-        <datalist id="names">
-            @foreach($users as $user)
-                @php
-                    $name = "$user->fname"." "."$user->lname";
-                    $national_code = $user->national_code;
-                @endphp
-                <option value="{{$national_code}}">{{$name}}</option>
-            @endforeach
-        </datalist>
         <datalist id="groups">
             @foreach($groups as $group)
                 @php
@@ -70,24 +53,16 @@
             @endforeach
         </datalist>
         <div>
-            <label for="names">کد ملی:</label>
-            {!! Form::text('national_code' , null , ['id' => 'national_code' , 'required' => '' , 'list' => 'names']) !!}
-        </div>
-        <div>
             <label for="date">حلقه صالحین:</label>
-            @if(!empty($old_group))
-                {!! Form::text('group' , $old_group , ['id' => 'group' , 'list' => 'groups' , 'required' => '']) !!}
-            @else
-                {!! Form::text('group' , null , ['id' => 'group' , 'list' => 'groups' , 'required' => '']) !!}
-            @endif
+            {!! Form::text('group' , null , ['id' => 'group' , 'list' => 'groups' , 'required' => '']) !!}
         </div>
         <div>
             <label for="date">تاریخ جلسه:</label>
-            {!! Form::text('date' , $date , ['id' => 'date' , 'data-jdp' => ''  , 'onclick' => 'jalaliDatepicker.show(this);'
+            {!! Form::text('date' , null , ['id' => 'date' , 'data-jdp' => ''  , 'onclick' => 'jalaliDatepicker.show(this);'
             , 'required' => '']) !!}
         </div>
         <div>
-            <input type="submit" value="ثبت" class="btn_submit">
+            <input type="submit" value="نمایش گزارش" class="btn_submit">
         </div>
         {!! Form::close() !!}
     </main>
@@ -100,5 +75,6 @@
     </script>
     <script src={{asset("js/register.js")}}></script>
 @endsection
+
 
 

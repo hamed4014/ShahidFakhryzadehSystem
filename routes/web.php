@@ -47,6 +47,9 @@ Route::middleware([\App\Http\Middleware\AuthLocal::class])->group(function () {
 
     Route::get('/home/present', [AttendanceController::class, 'create'] ) ->name('create.present');
     Route::post('/home/present', [AttendanceController::class, 'store'] ) ->name('store.present');
+
+    Route::get('/home/reportGroups', [AttendanceController::class, 'showReportGroups'] ) ->name('show.reportGroups');
+    //Route::post('/home/present', [AttendanceController::class, 'store'] ) ->name('store.present');
 });
 
 Route::get('/login', [MainController::class, 'login'] ) ->name('login');

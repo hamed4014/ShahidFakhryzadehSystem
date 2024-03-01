@@ -32,6 +32,12 @@ class SessionController extends Controller
         return $sessions;
     }
 
+    public function getSession( string $date )
+    {
+        $sessions = Session::where('date', $date)->get();
+        return $sessions;
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -54,6 +60,14 @@ class SessionController extends Controller
         $massage = "جلسه جدید با موفقیت ثبت شد.";
         \session()->flash( 'massage' , $massage);
         return redirect( route('home.session_list') );
+    }
+
+    public function storePrivate( string $date)
+    {
+        $session = new Session;
+        $session->date = $date;
+        $session->save();
+        return true;
     }
 
     /**

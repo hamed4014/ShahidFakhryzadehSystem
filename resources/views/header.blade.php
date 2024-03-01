@@ -70,9 +70,9 @@
             <hr>
         </li>
         <li class="sub_menu present">
-            <a>
+            <a href="{{route('show.reportGroups')}}">
                 <i class="fa-solid fa-caret-down fa-rotate-90"></i>
-                بررسی حضور اشخاص
+                گزارش حضور و غیاب حلقه ها
             </a>
             <hr>
         </li>
